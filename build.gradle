@@ -1,0 +1,24 @@
+plugins {
+    id 'java'
+}
+
+group 'com.arti'
+version '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+    maven {
+        url "https://hub.spigotmc.org/nexus/content/repositories/snapshots/"
+    }
+}
+
+dependencies {
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.9.0'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.9.0'
+    implementation 'org.spigotmc:spigot-api:1.19.2-R0.1-SNAPSHOT'
+    implementation 'net.dv8tion:JDA:5.0.0-beta.1'
+}
+
+test {
+    useJUnitPlatform()
+}
